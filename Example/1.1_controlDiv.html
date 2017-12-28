@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 300px;
+            margin: 20px auto 20px;
+        }
+        .buttons {
+            margin-bottom: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="buttons">
+            <input type="button" value="变宽" id="turnWidth">
+            <input type="button" value="变高" id="turnHeight">
+            <input type="button" value="变色" id="turnColor">
+            <input type="button" value="隐藏" id="turnZero">
+            <input type="button" value="重置" id="turnOne">
+        </div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        var box = document.getElementsByClassName('box')[0]
+
+        document.getElementById('turnWidth').onclick = function() {
+            box.style.width = '200px'
+        }
+        document.getElementById('turnHeight').onclick = function() {
+            box.style.height = '200px'
+        }
+        document.getElementById('turnColor').onclick = function() {
+            box.style.backgroundColor = 'blue'
+        }
+        document.getElementById('turnZero').onclick = function() {
+            box.style.display = 'none'
+        }
+        document.getElementById('turnOne').onclick = function() {
+            box.style.width = '100px'
+            box.style.height = '100px'
+            box.style.backgroundColor = 'red'
+            box.style.display = 'block'
+        }
+
+    </script>
+</body>
+</html>
