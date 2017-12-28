@@ -49,10 +49,16 @@
             box.style.display = 'none'
         }
         document.getElementById('turnOne').onclick = function() {
-            box.style.width = '100px'
-            box.style.height = '100px'
-            box.style.backgroundColor = 'red'
-            box.style.display = 'block'
+            // box.style.width = '100px'
+            // box.style.height = '100px'
+            // box.style.backgroundColor = 'red'
+            // box.style.display = 'block'
+            box.style = {
+                width: '100px',
+                height: '100px',
+                backgroundColor: 'red',
+                display: 'block'
+            }
         }
 
     </script>
