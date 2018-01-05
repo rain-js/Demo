@@ -5,8 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        body {
+            background-color: #A3C5A8;
+        }
+        ul {
+            list-style-type: none;
+            font-size: 0;
+        }
+        li {
+            display: inline-block;
+            width: 82px;
+            height: 28px;
+            border-top: 1px solid white;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            background-color: green;
+            text-align: center;
+            font-size: 12px;
+            line-height: 28px;
+        }
+        li:nth-child(1) {
+            border-left: 1px solid white;
+        }
+        li a {
+            color: white;
+            text-decoration: none;
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+        .box {
+            margin-bottom: 10px;
+        }
+        .box span {
+            width: 13px;
+            height: 13px;
+            display: inline-block;
+        }
+        .box span:nth-child(1) {
+            background-color: red;
+        }
+        .box span:nth-child(2) {
+            background-color: green;
+        }
+        .box span:nth-child(3) {
+            background-color: black;
+        }
+        .enable {
+            width: 7px !important;
+            height: 7px !important;
+            border-width: 3px;
+            border-style: solid;
+            border-color: green;
+            background-color: white !important;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="box">
+            <span></span>
+            <span class="enable"></span>
+            <span></span>
+        </div>
+
+        <ul class="nav">
+            <li><a href="javascript:">新闻</a></li>
+            <li><a href="javascript:">娱乐</a></li>
+            <li><a href="javascript:">体育</a></li>
+            <li><a href="javascript:">电影</a></li>
+            <li><a href="javascript:">音乐</a></li>
+            <li><a href="javascript:">旅游</a></li>
+        </ul>
+    </div>
 </body>
 </html>
