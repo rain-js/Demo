@@ -88,5 +88,49 @@
             <li><a href="javascript:">旅游</a></li>
         </ul>
     </div>
+
+    <script>
+        var body = document.querySelector('body')
+        var spans = document.querySelectorAll('.box span')
+        var lis = document.querySelectorAll('.nav li')
+
+        function removeClassName() {
+            for(var i = 0; i < spans.length; i++) {
+                spans[i].className = ''
+            }
+         }
+
+        function changeStyle(index) {
+            removeClassName()
+            // console.log(getComputedStyle(this).backgroundColor)
+            var backupColor = getComputedStyle(this).backgroundColor
+            this.className = 'enable'
+            this.style.borderColor = backupColor
+
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].style.backgroundColor = backupColor
+            }
+            if (index == 0) {
+                body.style.backgroundColor = '#fdd'
+            } else if (index == 1) {
+                body.style.backgroundColor = '#a3c5a8'
+            } else if (index == 2) {
+                body.style.backgroundColor = '#ccc'
+            }
+            // console.log('border-color = ' + this.style.borderColor)
+        }
+
+        spans[0].onclick = function() {
+            changeStyle.call(this, 0)
+        }
+
+        spans[1].onclick = function() {
+            changeStyle.call(this, 1)
+        }
+
+        spans[2].onclick = function() {
+            changeStyle.call(this, 2)
+        }
+    </script>
 </body>
 </html>
