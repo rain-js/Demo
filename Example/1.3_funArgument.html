@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 165px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div><input type="text" id="input1"></div>
+        <div><input type="text" id="input2"></div>
+        <div><input type="button" value="传参" id="btn"></div>
+    </div>
+
+    <script>
+        var input1 = document.getElementById('input1'),
+            input2 = document.getElementById('input2'),
+            button = document.getElementById('btn')
+
+        button.onclick = function() {
+            fn(input1, input2)
+        }
+
+        function fn(ele1, ele2) {
+            alert(`ele1 = ${ele1.value}, ele2 = ${ele2.value}`)
+        }
+    </script>
+</body>
+</html>
