@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .wrapper {
+        width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    input[type="button"] {
+        margin-bottom: 10px;
+    }
+    .box {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            <input type="button" id="btn" value="点击将 DIV 变成红色">
+        </div>
+        <div>
+            <span class="box"></span>
+            <span class="box"></span>
+            <span class="box"></span>
+        </div>
+    </div>
+
+    <script>
+        var boxs = document.getElementsByClassName('box'),
+            btn = document.getElementById('btn')
+
+        btn.onclick = function() {
+            for (var i = 0; i < boxs.length; i++) {
+                boxs[i].style.backgroundColor = 'red'
+            }
+        }
+    </script>
+</body>
+</html>
