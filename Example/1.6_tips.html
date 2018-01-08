@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>记住密码提示框</title>
+    <style>
+    body {
+        font-size: 12px;
+    }
+    .wrapper {
+        width: 190px;
+        margin-left: auto;
+        margin-right: auto;
+        /* border: 1px solid lightblue; */
+    }
+    .wrapper:hover .tips{
+        display: block;
+    }
+    .tips {
+        display: none;
+        width: 180px;
+        height: 36px;
+        padding: 5px;
+        margin-top: 5px;
+        border: 1px solid #f90;
+        background-color: #ffefa4;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="checkbox" value="">两周内自动登录
+        <div class="tips">
+            为了您的信息安全，请不要在网吧或公用电脑上使用此功能！
+        </div>
+    </div>
+</body>
+</html>
