@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度输入法</title>
+    <style>
+        ul, li, button {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .wrapper {
+            width: 76px;
+            margin-left: auto;
+            margin-right: auto;
+            /* border: 1px solid lightblue; */
+            font-size: 12px;
+            color: blue;
+        }
+        .wrapper button {
+            margin-bottom: 3px;
+        }
+        .wrapper ul {
+            border: 1px solid lightblue;
+        }
+        .wrapper ul li {
+            padding-top: 5px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+        }
+        .wrapper ul li:hover {
+            background-color: #d9e1f6;
+        }
+        .close {
+            border-top: 1px solid lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <button type="button">输入法</button>
+        <ul>
+            <li>手写</li>
+            <li>拼音</li>
+            <li class="close">关闭</li>
+        </ul>
+    </div>
+</body>
+</html>
