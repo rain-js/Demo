@@ -25,6 +25,7 @@
             margin-bottom: 3px;
         }
         .wrapper ul {
+            display: none;
             border: 1px solid lightblue;
         }
         .wrapper ul li {
@@ -42,12 +43,25 @@
 </head>
 <body>
     <div class="wrapper">
-        <button type="button">输入法</button>
+        <button type="button" id="btn">输入法</button>
         <ul>
             <li>手写</li>
             <li>拼音</li>
             <li class="close">关闭</li>
         </ul>
     </div>
+
+    <script>
+        var btn = document.getElementById('btn'),
+            close = document.getElementsByClassName('close')[0],
+            ul = document.querySelector('.wrapper ul')
+
+        btn.onclick = function() {
+            ul.style.display = 'block'
+        }
+        close.onclick = function() {
+            ul.style.display = 'none'
+        }
+    </script>
 </body>
 </html>
