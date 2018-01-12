@@ -6,22 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>弹出层</title>
     <style>
-        body {
-            font-size: 12px;
-        }
-        h1 {
-            font-size: 16px;
-            margin: 0;
-            padding: 0;
-            background-color: #FC0;
-            border-bottom: 4px solid #f90;
-        }
         .wrapper {
             width: 156px;
             margin-left: auto;
             margin-right: auto;
         }
+        .wrapper input {
+            cursor: pointer;
+        }
         .overlay {
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
@@ -30,7 +24,8 @@
             height: 100%;
             opacity: 0.5;
         }
-        .window {
+        .win {
+            display: none;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -41,13 +36,28 @@
             border: 4px solid #f90;
             background-color: white;
         }
-        .close {
-            display: inline-block;
-            color: #FC0;
-            border: 2px solid #f90;
-            background-color: white;
-            height: 13px;
+        .win h1 {
+            height: 24px;
+            margin: 0;
+            padding: 5px;
+            font-size: 14px;
+            background-color: #FC0;
+            border-bottom: 4px solid #f90;
         }
+        .close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            color: #f90;
+            border: 1px solid #f90;
+            background-color: white;
+            width: 14px;
+            height: 13px;
+            text-align: center;
+            line-height: 13px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -55,8 +65,26 @@
         <input type="button" value="弹出层">        
     </div>
     <div class="overlay"></div>
-    <div class="window">
-        <h1>系统提示<span class="close">×</span></h1>
+    <div class="win">
+        <h1>系统提示</h1>
+        <span class="close">×</span>
     </div>
+
+    <script>
+        var showBtn = document.querySelector('.wrapper input'),
+            overlay = document.querySelector('.overlay'),
+            win = document.querySelector('.win'),
+            close = document.querySelector('.close')
+        
+        showBtn.onclick = function() {
+            overlay.style.display = 'block'
+            win.style.display = 'block'
+        }
+        close.onclick = function() {
+            overlay.style.display = 'none'
+            win.style.display = 'none'
+        }
+
+    </script>
 </body>
 </html>
