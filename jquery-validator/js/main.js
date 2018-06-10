@@ -1,6 +1,5 @@
-var validator = new Validator('  1 ', {
-    max: 10
+;$(function() {
+    var username = new Input('#username')
+    // console.log(username)
+    // console.log(result)
 })
-
-var result = validator.validateMax()
-console.log(result)

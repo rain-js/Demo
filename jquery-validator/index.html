@@ -12,13 +12,14 @@
     <div class="wrapper">
         <div class="header">Yo...</div>
         <div class="content">
-            <label for="username">姓名</label>
-            <input type="text" id="username" name="username" class="input-control">
-            <div class="input-error">姓名格式有误！！</div>
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" class="input-control" data-rule="minlength:4|maxlength:10">
+            <div class="username-input-error input-error">用户名格式有误！！</div>
         </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <script src="js/validator.js"></script>
+    <script src="js/input.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
